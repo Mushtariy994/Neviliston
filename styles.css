@@ -1,0 +1,281 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #36364a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Asosiy karta */
+
+.container {
+    width: 830px;
+    min-height: 570px;
+    background: white;
+    border-radius: 30px;
+    display: flex;
+    padding: 20px;
+    gap: 25px;
+    overflow: hidden;
+}
+
+/* Chap taraf */
+
+.content {
+    flex: 1;
+    padding: 45px 10px 30px 35px;
+}
+
+h1 {
+    font-size: 40px;
+    color: #19192d;
+    margin-bottom: 22px;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 22px;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+li {
+    font-size: 14px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #333;
+}
+
+li::before {
+    content: "✓";
+    width: 19px;
+    height: 19px;
+    background: #f45f61;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Email formasi */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #777;
+    border-radius: 8px;
+    padding: 0 18px;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+input:focus {
+    border: 2px solid #ff6554;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(
+        100deg,
+        #ed4780,
+        #ff633d
+    );
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px #ffb2aa;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 25px #ff9999;
+}
+
+/* O'ng taraf */
+
+.image-section {
+    flex: 1;
+    min-height: 525px;
+    background: linear-gradient(
+        140deg,
+        #ff624e,
+        #ff466d
+    );
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Brauzer rasmi */
+
+.browser {
+    width: 230px;
+    height: 225px;
+    background: #e8e9f5;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 15px 30px #33333330;
+}
+
+.browser-header {
+    height: 30px;
+    background: #22223b;
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    gap: 9px;
+    border-radius: 10px 10px 0 0;
+}
+
+.browser-header span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #ff6570;
+}
+
+.browser-header span:nth-child(2) {
+    background: #ffb15b;
+}
+
+.browser-header span:nth-child(3) {
+    background: #52d3ae;
+}
+
+.browser-content {
+    padding: 15px;
+}
+
+.line {
+    width: 60%;
+    height: 7px;
+    background: #c3c5dc;
+    margin-bottom: 13px;
+    border-radius: 5px;
+}
+
+.line:nth-child(2) {
+    width: 80%;
+}
+
+.line:nth-child(3) {
+    width: 65%;
+}
+
+.line:nth-child(4) {
+    width: 45%;
+}
+
+/* Grafik */
+
+.chart {
+    width: 145px;
+    height: 115px;
+    background: white;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index: 3;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.chart svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* 94 ball */
+
+.score {
+    width: 95px;
+    height: 110px;
+    background: white;
+    position: absolute;
+    right: 0;
+    bottom: 180px;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score div {
+    width: 75px;
+    height: 75px;
+    border: 9px solid #ff654f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #24243a;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Telefon uchun */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .content {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .image-section {
+        min-height: 350px;
+    }
+
+    .chart {
+        right: 10px;
+    }
+
+}
